@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "timestamp": "18 Sep 2026, 12:42 PM",
+      "actor": "Harshit (Analyst)",
+      "action": "Inference verified",
+      "target": "test_image.jpg",
+      "status": "Trusted"
+    },
+    {
+      "timestamp": "18 Sep 2026, 12:40 PM",
+      "actor": "Harshit (Analyst)",
+      "action": "Model assurance scan",
+      "target": "yolov8.pt",
+      "status": "Completed"
+    },
+    {
+      "timestamp": "18 Sep 2026, 12:35 PM",
+      "actor": "Harshit (Analyst)",
+      "action": "Dataset assurance scan",
+      "target": "coco_dataset.zip",
+      "status": "Completed"
+    },
+    {
+      "timestamp": "17 Sep 2026, 04:18 PM",
+      "actor": "System",
+      "action": "Quarantine applied",
+      "target": "sentinel_radio.zip",
+      "status": "Actioned"
+    },
+    {
+      "timestamp": "17 Sep 2026, 09:02 AM",
+      "actor": "A. Nair (Auditor)",
+      "action": "Report exported",
+      "target": "TV-2026-0917.pdf",
+      "status": "Completed"
+    },
+    {
+      "timestamp": "16 Sep 2026, 06:45 PM",
+      "actor": "System",
+      "action": "Ledger sync",
+      "target": "audit-ledger",
+      "status": "Verified"
+    }
+  ]
+}

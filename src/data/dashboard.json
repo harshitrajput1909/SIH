@@ -1,0 +1,50 @@
+{
+  "kpis": [
+    { "label": "Datasets Assessed", "value": "34", "sub": "3 flagged for review" },
+    { "label": "Models Certified", "value": "18", "sub": "2 pending re-check" },
+    { "label": "Inference Verifications", "value": "1,208", "sub": "96% trusted" },
+    { "label": "Open Findings", "value": "12", "sub": "2 high severity" }
+  ],
+  "recent": [
+    {
+      "name": "coco_dataset.zip",
+      "type": "Dataset",
+      "score": 72,
+      "status": "Needs Review",
+      "tone": "amber",
+      "date": "18 Sep 2026"
+    },
+    {
+      "name": "yolov8.pt",
+      "type": "Model",
+      "score": 68,
+      "status": "Needs Review",
+      "tone": "amber",
+      "date": "18 Sep 2026"
+    },
+    {
+      "name": "test_image.jpg",
+      "type": "Inference",
+      "score": 88,
+      "status": "Trusted",
+      "tone": "green",
+      "date": "18 Sep 2026"
+    },
+    {
+      "name": "sentinel_radio.zip",
+      "type": "Dataset",
+      "score": 54,
+      "status": "Quarantined",
+      "tone": "red",
+      "date": "17 Sep 2026"
+    },
+    {
+      "name": "fleet_forecaster.onnx",
+      "type": "Model",
+      "score": 81,
+      "status": "Trusted",
+      "tone": "green",
+      "date": "16 Sep 2026"
+    }
+  ]
+}
