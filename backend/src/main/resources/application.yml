@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: trustvision-dataset-api
+  datasource:
+    url: jdbc:postgresql://localhost:5433/trustvision
+    username: trustvision
+    password: trustvision
+  jpa:
+    hibernate:
+      ddl-auto: none        # schema is owned by Flyway (V1__dataset_assurance.sql)
+    open-in-view: false
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 10GB
+      max-request-size: 11GB
+
+app:
+  storage:
+    root: ./workspace/storage
+  owner-username: system
+  ai-engine:
+    base-url: http://localhost:8100
+    poll-interval: 2s
+    timeout: 15m
+  provenance-engine:
+    base-url: http://localhost:8200
+
+server:
+  port: 8080

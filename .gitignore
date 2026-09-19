@@ -1,0 +1,26 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Build output and generated artifacts
+target/
+build/
+out/
+coverage/
+*.class
+
+# Local toolchain caches
+.tools/
+workspace/
+uploads/
+
