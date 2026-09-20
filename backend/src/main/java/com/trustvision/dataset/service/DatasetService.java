@@ -122,19 +122,20 @@ public class DatasetService {
         }
         dataset.setOwner(owner);
         dataset.setNotes(notes);
-        dataset = datasetRepository.save(dataset);
 
+        UUID storageId = UUID.randomUUID();
         StoredFile stored;
         try {
-            stored = storageService.storeDatasetArtefact(dataset.getId(), file);
+            stored = storageService.storeDatasetArtefact(storageId, file);
         } catch (IOException e) {
-            datasetRepository.delete(dataset);
             throw new InvalidDatasetException("could not store uploaded dataset: " + e.getMessage());
         }
+
         dataset.setArtefactRef(stored.absolutePath());
         dataset.setSha256(stored.sha256());
         dataset.setSizeBytes(stored.sizeBytes());
-        return DatasetResponse.from(datasetRepository.save(dataset));
+        dataset = datasetRepository.save(dataset);
+        return DatasetResponse.from(dataset);
     }
 
     // ------------------------------------------------------------------

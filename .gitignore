@@ -1,26 +1,98 @@
-node_modules
-dist
-dist-ssr
-*.local
-.DS_Store
-npm-debug.log*
+# Dependencies
+node_modules/
+**/node_modules/
+.pnpm-store/
 
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-.env
-
-# Build output and generated artifacts
-target/
-build/
+# Frontend build outputs
+/dist/
+/dist-ssr/
+/build/
+/.next/
 out/
 coverage/
+*.tsbuildinfo
+
+# Java / JVM build outputs
+/target/
+**/target/
+**/build/
 *.class
 
-# Local toolchain caches
-.tools/
+# Python virtual environments and caches
+.venv/
+venv/
+env/
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data, uploads, models, and generated content
 workspace/
+**/workspace/
 uploads/
+**/uploads/
+logs/
+logs/**
+cache/
+**/cache/
+generated/
+**/generated/
+**/datasets/
+**/data/raw/
+**/data/processed/
+*.pt
+*.pth
+*.onnx
+*.h5
+*.ckpt
+*.safetensors
+*.bin
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.parquet
+*.csv
+*.sqlite
+*.db
+*.sqlite3
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.iso
+
+# Secrets and env files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Toolchain / local runtime artifacts
+.tools/
+**/.tools/
+*.local
 

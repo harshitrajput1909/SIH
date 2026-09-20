@@ -1,0 +1,86 @@
+{
+  "file": {
+    "name": "coco_dataset.zip",
+    "meta": "10,000 images · 80.2 MB",
+    "status": "Processed",
+    "timestamp": "18 Sep 2026, 12:35 PM"
+  },
+  "overview": [
+    { "label": "Total Images", "value": "10,000" },
+    { "label": "Classes", "value": "80" },
+    { "label": "Contributors", "value": "4" },
+    { "label": "Image Format", "value": "JPG, PNG" }
+  ],
+  "quality": [
+    { "label": "Duplicates", "count": "1,200", "percent": 12 },
+    { "label": "Corrupted", "count": "200", "percent": 2 },
+    { "label": "Missing Labels", "count": "700", "percent": 7 },
+    { "label": "Suspicious Samples", "count": "100", "percent": 1 }
+  ],
+  "featureDrift": [
+    { "label": "-3", "reference": 0, "uploaded": 0 },
+    { "label": "-2.75", "reference": 0, "uploaded": 0.01 },
+    { "label": "-2.5", "reference": 0.01, "uploaded": 0.01 },
+    { "label": "-2.25", "reference": 0.02, "uploaded": 0.03 },
+    { "label": "-2", "reference": 0.05, "uploaded": 0.04 },
+    { "label": "-1.75", "reference": 0.09, "uploaded": 0.09 },
+    { "label": "-1.5", "reference": 0.15, "uploaded": 0.13 },
+    { "label": "-1.25", "reference": 0.23, "uploaded": 0.19 },
+    { "label": "-1", "reference": 0.32, "uploaded": 0.15 },
+    { "label": "-0.75", "reference": 0.42, "uploaded": 0.28 },
+    { "label": "-0.5", "reference": 0.51, "uploaded": 0.24 },
+    { "label": "-0.25", "reference": 0.57, "uploaded": 0.38 },
+    { "label": "0", "reference": 0.6, "uploaded": 0.33 },
+    { "label": "0.25", "reference": 0.57, "uploaded": 0.48 },
+    { "label": "0.5", "reference": 0.51, "uploaded": 0.44 },
+    { "label": "0.75", "reference": 0.42, "uploaded": 0.55 },
+    { "label": "1", "reference": 0.32, "uploaded": 0.5 },
+    { "label": "1.25", "reference": 0.23, "uploaded": 0.42 },
+    { "label": "1.5", "reference": 0.15, "uploaded": 0.35 },
+    { "label": "1.75", "reference": 0.09, "uploaded": 0.22 },
+    { "label": "2", "reference": 0.05, "uploaded": 0.18 },
+    { "label": "2.25", "reference": 0.02, "uploaded": 0.1 },
+    { "label": "2.5", "reference": 0.01, "uploaded": 0.06 },
+    { "label": "2.75", "reference": 0, "uploaded": 0.03 },
+    { "label": "3", "reference": 0, "uploaded": 0.01 }
+  ],
+  "classDrift": [
+    { "label": "Armour", "reference": 14, "uploaded": 16 },
+    { "label": "Infantry", "reference": 18, "uploaded": 15 },
+    { "label": "Artillery", "reference": 11, "uploaded": 13 },
+    { "label": "Naval", "reference": 9, "uploaded": 7 },
+    { "label": "Aircraft", "reference": 12, "uploaded": 11 },
+    { "label": "Radar", "reference": 8, "uploaded": 9 }
+  ],
+  "domainDrift": [
+    { "label": "Daylight", "reference": 30, "uploaded": 26 },
+    { "label": "Night", "reference": 12, "uploaded": 20 },
+    { "label": "Urban", "reference": 22, "uploaded": 24 },
+    { "label": "Rural", "reference": 18, "uploaded": 14 },
+    { "label": "Coastal", "reference": 10, "uploaded": 15 },
+    { "label": "Alpine", "reference": 8, "uploaded": 9 }
+  ],
+  "contributors": [
+    { "name": "Team A", "level": "low" },
+    { "name": "Team B", "level": "medium" },
+    { "name": "Team C", "level": "high" },
+    { "name": "Team D", "level": "low" }
+  ],
+  "anomalies": [
+    { "name": "Label Flip Detection", "level": "medium", "icon": "alert" },
+    { "name": "Duplicate Detection", "level": "low", "icon": "copy" },
+    { "name": "Backdoor Trigger Detection", "level": "high", "icon": "target" },
+    { "name": "Out-of-Distribution Samples", "level": "medium", "icon": "scan" }
+  ],
+  "evidence": [
+    { "scene": "tank", "chip": ["True: Truck", "Pred: Tank"] },
+    { "scene": "truck", "chip": ["True: Truck", "Pred: Tank"] },
+    { "scene": "plane", "chip": ["True: Plane", "Pred: Bird"] },
+    { "scene": "snow", "chip": ["Suspicious Pattern"] }
+  ],
+  "summary": {
+    "percent": 72,
+    "label": "Dataset Trust Score",
+    "status": "Needs Review"
+  }
+}

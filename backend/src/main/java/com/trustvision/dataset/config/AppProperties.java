@@ -14,13 +14,19 @@ public record AppProperties(Storage storage, String ownerUsername, AiEngine aiEn
             storage = new Storage(Path.of("workspace/storage"));
         }
         if (ownerUsername == null || ownerUsername.isBlank()) {
-            ownerUsername = "system";
+            ownerUsername = System.getenv().getOrDefault("APP_OWNER_USERNAME", "system");
         }
         if (aiEngine == null) {
-            aiEngine = new AiEngine("http://localhost:8100", Duration.ofSeconds(2), Duration.ofMinutes(15));
+            aiEngine = new AiEngine(
+                    System.getenv().getOrDefault("AI_ENGINE_BASE_URL", "http://localhost:8100"),
+                    Duration.ofSeconds(2),
+                    Duration.ofMinutes(15)
+            );
         }
         if (provenanceEngine == null) {
-            provenanceEngine = new ProvenanceEngine("http://localhost:8200");
+            provenanceEngine = new ProvenanceEngine(
+                    System.getenv().getOrDefault("PROVENANCE_ENGINE_BASE_URL", "http://localhost:8200")
+            );
         }
     }
 

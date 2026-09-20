@@ -1,0 +1,33 @@
+{
+  "file": {
+    "name": "yolov8.pt",
+    "meta": "6.2M parameters · 24 MB",
+    "status": "Processed",
+    "timestamp": "18 Sep 2026, 12:40 PM"
+  },
+  "overview": [
+    { "label": "Model Type", "value": "YOLOv8" },
+    { "label": "Parameters", "value": "6.2M" },
+    { "label": "Input Size", "value": "640 × 640" },
+    { "label": "Framework", "value": "PyTorch" },
+    { "label": "Architecture", "value": "CSPDarknet" },
+    { "label": "Task", "value": "Object Detection" }
+  ],
+  "risks": [
+    { "label": "Backdoor Detection", "level": "high", "icon": "crosshair" },
+    { "label": "Adversarial Robustness", "level": "medium", "icon": "shield" },
+    { "label": "Prediction Drift", "level": "low", "icon": "trend" },
+    { "label": "Confidence Drift", "level": "medium", "icon": "gauge" }
+  ],
+  "trainingRisk": [
+    { "label": "Core Training", "level": "low" },
+    { "label": "Fine-tuning", "level": "medium" },
+    { "label": "External Weights", "level": "high" },
+    { "label": "Data Augmentation", "level": "low" }
+  ],
+  "summary": {
+    "percent": 68,
+    "label": "Model Trust Score",
+    "status": "Needs Review"
+  }
+}
