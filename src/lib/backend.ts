@@ -1,6 +1,12 @@
+const API_BASE_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
+
+function apiUrl(path: string) {
+  return `${API_BASE_URL}${path}`;
+}
+
 export async function requestJson<T>(path: string, init?: RequestInit): Promise<T | null> {
   try {
-    const response = await fetch(path, {
+    const response = await fetch(apiUrl(path), {
       cache: 'no-store',
       ...init,
     });
@@ -23,7 +29,7 @@ export async function getJson<T>(path: string): Promise<T | null> {
 }
 
 export async function uploadDataset(formData: FormData) {
-  const response = await fetch('/dataset/upload', {
+  const response = await fetch(apiUrl('/dataset/upload'), {
     method: 'POST',
     body: formData,
     headers: {
@@ -43,7 +49,7 @@ export async function uploadDataset(formData: FormData) {
 }
 
 export async function analyzeDataset(datasetId: string) {
-  const response = await fetch('/dataset/analyze', {
+  const response = await fetch(apiUrl('/dataset/analyze'), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -66,7 +72,7 @@ export async function analyzeDataset(datasetId: string) {
 }
 
 export async function getDatasetDetail(datasetId: string) {
-  const response = await fetch(`/dataset/${datasetId}`, {
+  const response = await fetch(apiUrl(`/dataset/${datasetId}`), {
     method: 'GET',
     cache: 'no-store',
   });
