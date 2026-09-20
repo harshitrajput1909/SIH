@@ -9,6 +9,7 @@ RUN mvn -B clean package -DskipTests
 FROM eclipse-temurin:21-jre
 
 WORKDIR /app
+ENV PORT=8080
 ENV SPRING_PROFILES_ACTIVE=production
 COPY --from=build /workspace/target/trustvision-dataset-api-1.0.0.jar /app/app.jar
 
