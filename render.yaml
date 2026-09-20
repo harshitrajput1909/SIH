@@ -1,12 +1,12 @@
 services:
   - type: web
     name: trustvision-backend
-    env: java
+    runtime: docker
     plan: free
     region: oregon
     rootDir: backend
-    buildCommand: mvn -B clean package -DskipTests
-    startCommand: java -jar target/trustvision-dataset-api-1.0.0.jar
+    dockerfilePath: ./Dockerfile
+    dockerContext: ./
     healthCheckPath: /actuator/health
     envVars:
       - key: SPRING_PROFILES_ACTIVE

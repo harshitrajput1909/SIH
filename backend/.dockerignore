@@ -1,0 +1,7 @@
+target/
+workspace/
+*.log
+.git/
+.venv/
+venv/
+__pycache__/
