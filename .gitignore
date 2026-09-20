@@ -4,26 +4,29 @@ node_modules/
 .pnpm-store/
 
 # Frontend build outputs
-/dist/
+dist
+**/dist
 /dist-ssr/
-/build/
-/.next/
+build
+**/build
+.next
+**/.next
 out/
 coverage/
 *.tsbuildinfo
 
 # Java / JVM build outputs
-/target/
-**/target/
-**/build/
+target
+**/target
 *.class
 
 # Python virtual environments and caches
-.venv/
-venv/
-env/
-**/.venv/
-**/venv/
+.venv
+venv
+env
+**/.venv
+**/venv
+**/env
 **/__pycache__/
 *.py[cod]
 *.pyo
@@ -37,13 +40,14 @@ workspace/
 **/workspace/
 uploads/
 **/uploads/
-logs/
-logs/**
-cache/
-**/cache/
+logs
+**/logs
+cache
+**/cache
 generated/
 **/generated/
-**/datasets/
+datasets
+**/datasets
 **/data/raw/
 **/data/processed/
 *.pt
