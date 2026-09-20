@@ -11,11 +11,11 @@ services:
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: production
-      - key: DB_URL
+      - key: SPRING_DATASOURCE_URL
         sync: false
-      - key: DB_USERNAME
+      - key: SPRING_DATASOURCE_USERNAME
         sync: false
-      - key: DB_PASSWORD
+      - key: SPRING_DATASOURCE_PASSWORD
         sync: false
       - key: APP_OWNER_USERNAME
         value: system
